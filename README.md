@@ -5,6 +5,10 @@
 npm install
 ```
 
+## Documentation
+```
+Refer to link https://github.com/beyondsun/stellar-test-exchange-demo/blob/master/StellarToExchangeArchitecture.pdf
+```
 ###Creation
 ```
 Showcases Deposit and Withdrawals for Stellar Lumens to add in your exchange
