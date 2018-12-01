@@ -7,7 +7,7 @@ npm install
 
 ## Documentation
 ```
-Refer to link https://github.com/beyondsun/stellar-test-exchange-demo/blob/master/StellarToExchangeArchitecture.pdf
+Refer to link [a link](https://github.com/beyondsun/stellar-test-exchange-demo/blob/master/StellarToExchangeArchitecture.pdf)
 ```
 ###Creation
 ```
