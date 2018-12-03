@@ -43,9 +43,24 @@ const ServerSubmitTransaction = (server, customer, lumens, transaction) => {
           asset: StellarSdk.Asset.native(),
           amount: lumens
         }))
+        //Ability to multisign
+        /*addOperation(StellarSdk.Operation.setOptions({
+            signer: {
+              ed25519PublicKey: "Enter Secondary signer address",
+              weight: 1
+            }
+          }))
+          .addOperation(StellarSdk.Operation.setOptions({
+            masterWeight: 1, 
+            lowThreshold: 1,
+            medThreshold: 2, 
+            highThreshold: 2 
+          }))*/
         .build();
 
       transaction.sign(StellarSdk.Keypair.fromSecret(config.baseAccountSecret));
+      //If multi sign all parties to sign
+      //transaction.sign(KeyPair of secondary address);
       return server.submitTransaction(transaction);
     }).catch(StellarSdk.NotFoundError, function(err) {
         // create the account and fund it
